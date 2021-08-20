@@ -1,0 +1,92 @@
+E:\Project files\SMS Api\bin\SMS Api.dll.config
+E:\Project files\SMS Api\bin\SMS Api.dll
+E:\Project files\SMS Api\bin\SMS Api.pdb
+E:\Project files\SMS Api\bin\roslyn\csc.exe
+E:\Project files\SMS Api\bin\roslyn\csc.exe.config
+E:\Project files\SMS Api\bin\roslyn\csc.rsp
+E:\Project files\SMS Api\bin\roslyn\csi.exe
+E:\Project files\SMS Api\bin\roslyn\csi.exe.config
+E:\Project files\SMS Api\bin\roslyn\csi.rsp
+E:\Project files\SMS Api\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Project files\SMS Api\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Project files\SMS Api\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Project files\SMS Api\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Project files\SMS Api\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Project files\SMS Api\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Project files\SMS Api\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Project files\SMS Api\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Project files\SMS Api\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Project files\SMS Api\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Project files\SMS Api\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Project files\SMS Api\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Project files\SMS Api\bin\roslyn\System.AppContext.dll
+E:\Project files\SMS Api\bin\roslyn\System.Collections.Immutable.dll
+E:\Project files\SMS Api\bin\roslyn\System.Console.dll
+E:\Project files\SMS Api\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Project files\SMS Api\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Project files\SMS Api\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Project files\SMS Api\bin\roslyn\System.Globalization.Calendars.dll
+E:\Project files\SMS Api\bin\roslyn\System.IO.Compression.dll
+E:\Project files\SMS Api\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Project files\SMS Api\bin\roslyn\System.IO.FileSystem.dll
+E:\Project files\SMS Api\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Project files\SMS Api\bin\roslyn\System.Net.Http.dll
+E:\Project files\SMS Api\bin\roslyn\System.Net.Sockets.dll
+E:\Project files\SMS Api\bin\roslyn\System.Reflection.Metadata.dll
+E:\Project files\SMS Api\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Project files\SMS Api\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Project files\SMS Api\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Project files\SMS Api\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Project files\SMS Api\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Project files\SMS Api\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Project files\SMS Api\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Project files\SMS Api\bin\roslyn\System.ValueTuple.dll
+E:\Project files\SMS Api\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Project files\SMS Api\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Project files\SMS Api\bin\roslyn\System.Xml.XPath.dll
+E:\Project files\SMS Api\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Project files\SMS Api\bin\roslyn\vbc.exe
+E:\Project files\SMS Api\bin\roslyn\vbc.exe.config
+E:\Project files\SMS Api\bin\roslyn\vbc.rsp
+E:\Project files\SMS Api\bin\roslyn\VBCSCompiler.exe
+E:\Project files\SMS Api\bin\roslyn\VBCSCompiler.exe.config
+E:\Project files\SMS Api\bin\Antlr3.Runtime.dll
+E:\Project files\SMS Api\bin\EntityFramework.dll
+E:\Project files\SMS Api\bin\EntityFramework.SqlServer.dll
+E:\Project files\SMS Api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Project files\SMS Api\bin\Microsoft.Web.Infrastructure.dll
+E:\Project files\SMS Api\bin\Newtonsoft.Json.dll
+E:\Project files\SMS Api\bin\System.Net.Http.Formatting.dll
+E:\Project files\SMS Api\bin\System.Web.Cors.dll
+E:\Project files\SMS Api\bin\System.Web.Helpers.dll
+E:\Project files\SMS Api\bin\System.Web.Http.Cors.dll
+E:\Project files\SMS Api\bin\System.Web.Http.dll
+E:\Project files\SMS Api\bin\System.Web.Http.WebHost.dll
+E:\Project files\SMS Api\bin\System.Web.Mvc.dll
+E:\Project files\SMS Api\bin\System.Web.Optimization.dll
+E:\Project files\SMS Api\bin\System.Web.Razor.dll
+E:\Project files\SMS Api\bin\System.Web.WebPages.Deployment.dll
+E:\Project files\SMS Api\bin\System.Web.WebPages.dll
+E:\Project files\SMS Api\bin\System.Web.WebPages.Razor.dll
+E:\Project files\SMS Api\bin\WebGrease.dll
+E:\Project files\SMS Api\bin\EntityFramework.xml
+E:\Project files\SMS Api\bin\EntityFramework.SqlServer.xml
+E:\Project files\SMS Api\bin\System.Web.Http.Cors.xml
+E:\Project files\SMS Api\bin\Newtonsoft.Json.xml
+E:\Project files\SMS Api\bin\System.Net.Http.Formatting.xml
+E:\Project files\SMS Api\bin\System.Web.Helpers.xml
+E:\Project files\SMS Api\bin\System.Web.Http.xml
+E:\Project files\SMS Api\bin\System.Web.Http.WebHost.xml
+E:\Project files\SMS Api\bin\System.Web.Mvc.xml
+E:\Project files\SMS Api\bin\System.Web.Optimization.xml
+E:\Project files\SMS Api\bin\System.Web.Razor.xml
+E:\Project files\SMS Api\bin\System.Web.WebPages.xml
+E:\Project files\SMS Api\bin\System.Web.WebPages.Deployment.xml
+E:\Project files\SMS Api\bin\System.Web.WebPages.Razor.xml
+E:\Project files\SMS Api\bin\Antlr3.Runtime.pdb
+E:\Project files\SMS Api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Project files\SMS Api\obj\Debug\SMS Api.csproj.AssemblyReference.cache
+E:\Project files\SMS Api\obj\Debug\SMS Api.csproj.CoreCompileInputs.cache
+E:\Project files\SMS Api\obj\Debug\SMS Api.csproj.CopyComplete
+E:\Project files\SMS Api\obj\Debug\SMS Api.dll
+E:\Project files\SMS Api\obj\Debug\SMS Api.pdb
