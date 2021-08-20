@@ -16,6 +16,13 @@ namespace SMS_Api.Controllers
         
         public IHttpActionResult PayResult()
         {
+            Invoice invoice = new Invoice
+            {
+                VendorName = Utility.Vendorname,
+                PaymentDateTime = DateTime.Now,
+                Amount = Utility.totalAmount
+            };
+            db.Invoices.Add(invoice);
 
             db.CartItems.RemoveRange(db.CartItems.ToList());
             db.SaveChanges();
@@ -34,7 +41,7 @@ namespace SMS_Api.Controllers
 
             Utility.totalAmount = total;
 
-            return"Cart total "+total ;
+            return ""+total ;
         }
 
 

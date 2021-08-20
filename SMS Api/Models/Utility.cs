@@ -8,5 +8,6 @@ namespace SMS_Api.Models
     public class Utility
     {
         public static int totalAmount = 0;
+        public static string Vendorname;
     }
 }

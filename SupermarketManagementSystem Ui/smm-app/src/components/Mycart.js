@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 import {Button, ButtonToolbar, Table} from 'react-bootstrap';
 import { Editcart } from './Editcart';
+import { Vendornavigation } from './Vendornavigation';
+
+
 
 
 
 export class Mycart extends Component{
     constructor(props){
         super(props);
-        this.state={cart:[],editcart:false,paydone:[]}
+        this.state={cart:[],editcart:false,cartTotal:0}
     }
     componentDidMount()
     {
@@ -17,13 +20,14 @@ export class Mycart extends Component{
     componentDidUpdate()
     {
         this.refreshList();
+        
 
     }
     deleteProduct(Id){
-        
-        if(window.confirm('Are you sure you want to delete the item'))
+        console.log(Id);
+        if(window.confirm('Are you sure you want to delete the item')) //for del from cart
         {
-            fetch('https://localhost:44349/api/paydone'+Id,{
+            fetch('https://localhost:44349/api/cart/'+Id,{
                 method:'DELETE',
                 header:{'Accept':'application/json',
                      'Content-Type':'application/json'
@@ -35,7 +39,7 @@ export class Mycart extends Component{
     
     refreshList()
     {
-        fetch('https://localhost:44349/api/cart')
+        fetch('https://localhost:44349/api/cart') //for cartitems
         .then(response =>response.json())
         .then(data =>
                 {
@@ -47,24 +51,49 @@ export class Mycart extends Component{
 
     calCartTotal()
     {
-        fetch('https://localhost:44349/api/paydone')
-        .then(response =>response.json())
-        .then(data =>
-                {
-
-                  this.setState({paydone:data});
+        fetch('https://localhost:44349/api/paydone',{ //to cartTotal
+                    method:'GET',
+                    header:{'Accept':'application/json',
+                         'Content-Type':'application/json'
                 }
-            );
+                })
+                .then(response => response.json())
+                .then(data =>
+                    {
+                      this.setState({cartTotal:data});
+                    },
+                (error)=>
+                {
+                    console.log("failed")
+                }
+
+                )
+
         
+    }
+
+    emptyCart()
+    {
+        if(window.confirm('Pay the total Amount')) //for del from cart
+        {
+            fetch('https://localhost:44349/api/paydone',{
+                method:'DELETE',
+                header:{'Accept':'application/json',
+                     'Content-Type':'application/json'
+            }
+            })
+        }
     }
 
     render()
     {
-        const {cart,Id,Name,Category,Price,Quantity,TotalPrice,paydone} = this.state
+        const {cart,Id,Name,Category,Price,Quantity,TotalPrice,cartTotal} = this.state
         
         let editcartClose
          = () =>this.setState({editcart:false})
         return(
+            <div>
+                <Vendornavigation/>
             <Table className="mt-4" stripped bordered hover size="sm">
                 <thead>
                     <tr>
@@ -101,17 +130,32 @@ export class Mycart extends Component{
                         </tr>
                         
                         )}
+                         
+
+                         
                         
-                        <Button className="mr-5" onClick={this.calCartTotal()}>
-                            Cart Total
-                        </Button>
-                        <Button className="ml-5" onClick={this.emptyCart}>
-                            Pay
-                        </Button>
+                        
                     
                 </tbody>
+                
+                {"\n"}
+                        
+                        <Button className="ml-1" onClick={this.calCartTotal()}>
+                            Total Amount=₹{cartTotal}
+                        </Button>
+
+
+                {"\n"} {"\n"} {"\n"}
+            
+                <Button className="ml-1" onClick={()=>this.emptyCart()}>
+                            Pay=₹{cartTotal}
+                </Button>
 
             </Table>
+
+            </div>
+
+            
 
          
         )

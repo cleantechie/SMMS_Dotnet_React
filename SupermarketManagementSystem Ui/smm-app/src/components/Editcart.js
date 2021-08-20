@@ -43,7 +43,7 @@ export class Editcart extends Component{
                 <Snackbar
                 anchorOrigin={{vertical:'bottom',horizontal:'center'}}
                 open={this.state.snackbaropen}
-                autoHideDuration={5000}
+                autoHideDuration={1000}
                 message = {<span id ="message-id">{this.state.snackbarmsg}</span>}
                 action = {
                     [

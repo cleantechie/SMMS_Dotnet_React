@@ -28,7 +28,7 @@ namespace SMS_Api.Controllers
                 if (db.Credentials.SingleOrDefault(x =>
                     x.Email == credential.Email && x.Password == credential.Password)!=null)
                 {
-
+                    Utility.Vendorname = credential.Email;
                     return Ok(new
                         { status = 200, isSuccess = true, isAdmin = "false", message = "User Login successfully", UserDetails = credential.Email });
                 }

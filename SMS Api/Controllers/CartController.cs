@@ -83,10 +83,13 @@ namespace SMS_Api.Controllers
             
         }
 
-        public string Delete(int? id)
+        public string Delete(int id)
         {
-            if (id == null) throw new ArgumentNullException(nameof(id));
+            
             CartItem cartItem = db.CartItems.Find(id);
+            if (cartItem == null)
+            {
+                return "No product exists with the id";}
             db.CartItems.Remove(cartItem);
             db.SaveChanges();
 

@@ -22,12 +22,14 @@ function Loginpage(props) {
                 console.log("A:",a)  
                  
                 console.log(result.data.message);  
+                //eslint-disable-next-line
                 if (result.data.status == '200')  
                 {
-                    if(result.data.isAdmin=='true')
+                  //eslint-disable-next-line
+                    if(result.data.isAdmin=='True')
                     {
                       alert("Success");
-                    props.history.push('/')  
+                    props.history.push('/Admindashboard')  
                     }
                     else
                     {

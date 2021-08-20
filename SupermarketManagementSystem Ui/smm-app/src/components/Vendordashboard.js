@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Table} from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
+import { Vendornavigation } from './Vendornavigation';
 
 export class Vendordashboard extends Component{
     constructor(props){
@@ -46,7 +47,10 @@ export class Vendordashboard extends Component{
     render()
     {
         const {vend} = this.state;
+        
         return(
+            <div>
+                <Vendornavigation/>
             <Table className="mt-4" stripped bordered hover size="sm">
                 <thead>
                     <tr>
@@ -74,7 +78,8 @@ export class Vendordashboard extends Component{
                 </tbody>
 
             </Table>
-
+            </div>
         )
+        
     }
     }
