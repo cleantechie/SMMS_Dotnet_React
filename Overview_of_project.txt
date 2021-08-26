@@ -4,7 +4,7 @@ The project was done by our pod consisting of 4 members
 The Backend technology used is webapi,frontend is ReactJS,Mssqlserver for Database
 
 The indivdual Contribution is as follows:
-Harsha Vardhan S - Entire Vendordashboard,VendorDetails,Invoice History is Admindashboard,Logout,Validations and Database Design
+Harsha Vardhan S(Me) - Entire Vendordashboard,VendorDetails,Invoice History is Admindashboard,Logout,Validations and Database Design
 Naveen Sai - Registration and Login
 Utkarsh - Add Product functionality in Admindashboard
 Bhavishya - Edit and Delete functionalities in Admindashboard
