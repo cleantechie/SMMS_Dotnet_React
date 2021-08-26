@@ -16,29 +16,37 @@ namespace SMS_Api.Controllers
         [HttpPost]
         public IHttpActionResult Login(Credential credential)
         {
-            if (credential.Email == "admin" && credential.Password == "admin")
+            try
             {
-                return Ok(new { status = 200, isSuccess = true, isAdmin="True", message = "Admin Login successfully" });
-
-            }
-
-            else
-            {
-                
-                if (db.Credentials.SingleOrDefault(x =>
-                    x.Email == credential.Email && x.Password == credential.Password)!=null)
+                if (credential.Email == "admin" && credential.Password == "admin")
                 {
-                    Utility.Vendorname = credential.Email;
-                    return Ok(new
-                        { status = 200, isSuccess = true, isAdmin = "false", message = "User Login successfully", UserDetails = credential.Email });
+                    return Ok(new { status = 200, isSuccess = true, isAdmin="True", message = "Admin Login successfully" });
+
                 }
+
                 else
                 {
+                
+                    if (db.Credentials.SingleOrDefault(x =>
+                        x.Email == credential.Email && x.Password == credential.Password)!=null)
+                    {
+                        Utility.Vendorname = credential.Email;
+                        return Ok(new
+                            { status = 200, isSuccess = true, isAdmin = "false", message = "User Login successfully", UserDetails = credential.Email });
+                    }
+                    else
+                    {
                     
-                    return Ok(new { status = 401, isSuccess = false, message = "Invalid User", });
-                }
+                        return Ok(new { status = 401, isSuccess = false, message = "Invalid User", });
+                    }
                 
 
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
             }
             /*var log = db.Vendors.Where(x => x.Email.Equals(vendor.Email) && x.Password.Equals(vendor.Password)).FirstOrDefault();
 

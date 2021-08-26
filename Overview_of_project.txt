@@ -1,0 +1,36 @@
+This project was part of Cognizant internship in Dotnet and React track for Full-Stack Engineer
+
+The project was done by our pod consisting of 4 members
+The Backend technology used is webapi,frontend is ReactJS,Mssqlserver for Database
+
+The indivdual Contribution is as follows:
+Harsha Vardhan S - Entire Vendordashboard,VendorDetails,Invoice History is Admindashboard,Logout,Validations and Database Design
+Naveen Sai - Registration and Login
+Utkarsh - Add Product functionality in Admindashboard
+Bhavishya - Edit and Delete functionalities in Admindashboard
+
+Flow of the project
+
+1.First the user need to login as admin or seller.
+2.According to the role he will directed to his dashboard.
+3.In Admindashboard the admin can view all the products available in the supermarket
+4.He can Add,Edit,Delete the products.
+5.He can view the invoice History of the supermarket.
+6.He can register a new vendor for the supermarket and on successfull Registration the vendor can login as vendor
+7.Admin can view the entire details of vendors in the supermarket.
+8.In Vendordashboard,he can see the products available in the supermarket.
+9.He can Add them to Cart.
+10.As soon as he add the products to cart the cart table will be updated.
+11.If same Product is added twice it doesnt show new row in cart,it just updates the quantity.
+12.The indivdual Total price of products are calculated and displayed.
+13.vendor can edit the quantity of any products in cart and also can Delete any product from the cart.
+14.The Total Value of cart is calculated and displayed as paynow button
+15.After the payment done the cart will be set to empty for the next customer and invoice is genrated and added to invoice table.
+16.We can see the invoice in Admindashboard.
+17.Logout will logout the session user and redirect to loginpage
+
+
+
+
+
+

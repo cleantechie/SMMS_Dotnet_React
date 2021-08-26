@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Adminavigation } from './Adminnavigation';
-import { Vendornavigation } from './Vendornavigation';
+
+
 
 export class Home extends Component{
     

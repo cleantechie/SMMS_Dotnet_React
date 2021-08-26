@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Table} from 'react-bootstrap';
 import { Adminavigation } from './Adminnavigation';
+import {Button, ButtonToolbar} from 'react-bootstrap';
 
 
 export class Vendordetails extends Component{
@@ -26,6 +27,21 @@ export class Vendordetails extends Component{
                 }
             );
     }
+
+    deleteSeller(Id){
+        console.log(Id);
+        if(window.confirm('Are you sure you want to delete the Seller')) //for del from cart
+        {
+            fetch('https://localhost:44349/api/vendordetails/'+Id,{
+                method:'DELETE',
+                header:{'Accept':'application/json',
+                     'Content-Type':'application/json'
+            }
+            }).then(window.location.reload())
+            
+        }
+    }
+
 
     render()
     {
@@ -55,8 +71,16 @@ export class Vendordetails extends Component{
                             <td>{getvendor.PhoneNumber}</td>
                             <td>{getvendor.Email}</td>
                             <td>{getvendor.Password}</td>
-                            
                             <td>{getvendor.Address}</td>
+                            <td>
+                            <ButtonToolbar>
+                                    
+                                    <Button className="mr-2" onClick={()=>this.deleteSeller(getvendor.Id)} variant="danger">
+                                        Delete
+                                    </Button>
+                                    
+                                </ButtonToolbar>
+                            </td>
                             
                         </tr>
                         )}

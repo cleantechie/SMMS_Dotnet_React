@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+
 namespace SMS_Api.Models
 {
     using System;
@@ -15,8 +17,11 @@ namespace SMS_Api.Models
     public partial class Invoice
     {
         public int Id { get; set; }
+        [Required]
         public string VendorName { get; set; }
+        [Required]
         public System.DateTime PaymentDateTime { get; set; }
+        [Required]
         public int Amount { get; set; }
     }
 }

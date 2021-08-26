@@ -16,32 +16,48 @@ namespace SMS_Api.Controllers
         
         public IHttpActionResult PayResult()
         {
-            Invoice invoice = new Invoice
+            try
             {
-                VendorName = Utility.Vendorname,
-                PaymentDateTime = DateTime.Now,
-                Amount = Utility.totalAmount
-            };
-            db.Invoices.Add(invoice);
+                Invoice invoice = new Invoice
+                {
+                    VendorName = Utility.Vendorname,
+                    PaymentDateTime = DateTime.Now,
+                    Amount = Utility.totalAmount
+                };
+                db.Invoices.Add(invoice);
 
-            db.CartItems.RemoveRange(db.CartItems.ToList());
-            db.SaveChanges();
+                db.CartItems.RemoveRange(db.CartItems.ToList());
+                db.SaveChanges();
 
-            return Ok(new { status = 200, isDeleteSuccess = true, isCartEmpty = "True", message = "Payment Done" });
+                return Ok(new { status = 200, isDeleteSuccess = true, isCartEmpty = "True", message = "Payment Done" });
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
         [HttpGet]
         public string cartTotal()
         {
-            var cartItems = db.CartItems.ToList();
-
-            foreach (var item in cartItems)
+            try
             {
-                total = total + (item.Quantity * item.Price);
+                var cartItems = db.CartItems.ToList();
+
+                foreach (var item in cartItems)
+                {
+                    total = total + (item.Quantity * item.Price);
+                }
+
+                Utility.totalAmount = total;
+
+                return ""+total ;
             }
-
-            Utility.totalAmount = total;
-
-            return ""+total ;
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
 

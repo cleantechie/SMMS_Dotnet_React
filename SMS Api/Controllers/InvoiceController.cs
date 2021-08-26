@@ -16,7 +16,15 @@ namespace SMS_Api.Controllers
 
         {
 
-            return db.Invoices.ToList();
+            try
+            {
+                return db.Invoices.ToList();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
 
 
 

@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+
 namespace SMS_Api.Models
 {
     using System;
@@ -15,8 +17,12 @@ namespace SMS_Api.Models
     public partial class Product
     {
         public int Id { get; set; }
+        
+        [Required(ErrorMessage = "Product Name is required")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "Product Category is required")]
         public string Category { get; set; }
+        [Required(ErrorMessage = "Product Price is required")]
         public int Price { get; set; }
     }
 }

@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import {Button, ButtonToolbar, Table} from 'react-bootstrap';
 import { Editcart } from './Editcart';
+// eslint-disable-next-line
 import { Vendornavigation } from './Vendornavigation';
 
 
 
 
-
 export class Mycart extends Component{
+    
+
     constructor(props){
         super(props);
         this.state={cart:[],editcart:false,cartTotal:0}
@@ -21,6 +23,7 @@ export class Mycart extends Component{
     {
         this.refreshList();
         
+        
 
     }
     deleteProduct(Id){
@@ -32,7 +35,7 @@ export class Mycart extends Component{
                 header:{'Accept':'application/json',
                      'Content-Type':'application/json'
             }
-            })
+            }).then(window.location.reload())
         }
     }
 
@@ -81,7 +84,7 @@ export class Mycart extends Component{
                 header:{'Accept':'application/json',
                      'Content-Type':'application/json'
             }
-            })
+            }).then(window.location.reload())
         }
     }
 
@@ -138,14 +141,14 @@ export class Mycart extends Component{
                     
                 </tbody>
                 
-                {"\n"}
+                
                         
                         <Button className="ml-1" onClick={this.calCartTotal()}>
                             Total Amount=₹{cartTotal}
                         </Button>
 
 
-                {"\n"} {"\n"} {"\n"}
+                
             
                 <Button className="ml-1" onClick={()=>this.emptyCart()}>
                             Pay=₹{cartTotal}
@@ -155,7 +158,7 @@ export class Mycart extends Component{
 
             </div>
 
-            
+
 
          
         )

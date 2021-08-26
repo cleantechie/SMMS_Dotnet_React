@@ -14,42 +14,69 @@ namespace SMS_Api.Controllers
 
         public IEnumerable<Product> Get()
         {
-            return db.Products.ToList();
+            try
+            {
+                return db.Products.ToList();
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         public string Post(Product product)
         {
-           
-            
-            if (product == null)
+            try
             {
-                return "Null Exception";
+                
+
+
+                if (product == null)
+                {
+                    return "Null Exception";
+                }
+                else
+                {
+                    db.Products.Add(product);
+                    db.SaveChanges();
+                    return "Product Added Successfully";
+                }
             }
-            else
+
+            catch (Exception e)
             {
-                db.Products.Add(product);
-                db.SaveChanges();
-                return "Product Added Successfully";
+                Console.WriteLine(e);
+                throw;
             }
-            
+
         }
 
         public string Put(Product product)
         {
-            var product_ = db.Products.Find(product.Id);
-
-            if (product_ == null) { return "Id not Found"; }
-            else
+            try
             {
-                product_.Id = product.Id;
-                product_.Name = product.Name;
-                product_.Category = product.Category;
-                product_.Price = product.Price;
+                var product_ = db.Products.Find(product.Id);
 
-                
-                db.SaveChanges();
+                if (product_ == null) { return "Id not Found"; }
+                else
+                {
+                    product_.Id = product.Id;
+                    product_.Name = product.Name;
+                    product_.Category = product.Category;
+                    product_.Price = product.Price;
 
-                return "Product Updated Successfully";
+
+                    db.SaveChanges();
+
+                    return "Product Updated Successfully";
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
             }
         }
 
@@ -57,13 +84,21 @@ namespace SMS_Api.Controllers
 
         public string Delete(int id)
         {
-            Product product = db.Products.Find(id);
-            if (product == null) { return "Id not Found"; }
-            else
+            try
             {
-                db.Products.Remove(product);
-                db.SaveChanges();
-                return "Product deleted successfully";
+                Product product = db.Products.Find(id);
+                if (product == null) { return "Id not Found"; }
+                else
+                {
+                    db.Products.Remove(product);
+                    db.SaveChanges();
+                    return "Product deleted successfully";
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
             }
         }
     }

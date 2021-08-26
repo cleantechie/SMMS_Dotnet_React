@@ -38,8 +38,17 @@ namespace SMS_Api.Controllers
         public IEnumerable<CartItem> Get()
 
         {
-            
+            try
+            {
                 return db.CartItems.ToList();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+                
 
             
             
@@ -85,15 +94,23 @@ namespace SMS_Api.Controllers
 
         public string Delete(int id)
         {
-            
-            CartItem cartItem = db.CartItems.Find(id);
-            if (cartItem == null)
+            try
             {
-                return "No product exists with the id";}
-            db.CartItems.Remove(cartItem);
-            db.SaveChanges();
 
-            return "Deleted with " + id + " Successfully";
+                CartItem cartItem = db.CartItems.Find(id);
+                if (cartItem == null)
+                {
+                    return "No product exists with the id";}
+                db.CartItems.Remove(cartItem);
+                db.SaveChanges();
+
+                return "Deleted with " + id + " Successfully";
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         /*[System.Web.Http.HttpDelete]

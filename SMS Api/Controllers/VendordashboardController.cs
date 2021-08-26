@@ -16,7 +16,15 @@ namespace SMS_Api.Controllers
 
         public IEnumerable<Product> Get()
         {
-            return db.Products.ToList();
+            try
+            {
+                return db.Products.ToList();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         public string Post(int? id)

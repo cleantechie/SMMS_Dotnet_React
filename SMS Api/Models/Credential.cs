@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+
 namespace SMS_Api.Models
 {
     using System;
@@ -15,7 +17,9 @@ namespace SMS_Api.Models
     public partial class Credential
     {
         public int Id { get; set; }
+        [Required]
         public string Email { get; set; }
+        [Required]
         public string Password { get; set; }
     }
 }

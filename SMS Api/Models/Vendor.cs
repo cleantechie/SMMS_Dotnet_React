@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+
 namespace SMS_Api.Models
 {
     using System;
@@ -15,12 +17,37 @@ namespace SMS_Api.Models
     public partial class Vendor
     {
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "FirstName is required")]
         public string FirstName { get; set; }
+
+
+        [Required(ErrorMessage = "LastName is required")]
         public string LastName { get; set; }
+
+        [Required(ErrorMessage = "Phonenumber is required")]
         public string PhoneNumber { get; set; }
+
+        [Required(ErrorMessage = "Email is required")]
+        //[RegularExpression("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$", ErrorMessage = "Must be a valid email")]
         public string Email { get; set; }
+
+
+        [Required(ErrorMessage = "Password is required")]
+        [StringLength(50,ErrorMessage = "Must be between 5 and 50 characters", MinimumLength = 6)]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
+
+
+        [Required(ErrorMessage = "Confirm Password is required")]
+        [StringLength(50, ErrorMessage = "Must be between 5 and 50 characters", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Compare("Password")]
         public string ConfirmPassword { get; set; }
+
+
+
+        [Required(ErrorMessage = "Address required")]
         public string Address { get; set; }
     }
 }

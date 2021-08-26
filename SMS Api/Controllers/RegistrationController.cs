@@ -14,19 +14,34 @@ namespace SMS_Api.Controllers
 
         public IEnumerable<Vendor> Get()
         {
-            return db.Vendors.ToList();
+            try
+            {
+                return db.Vendors.ToList();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
         public string Post(Vendor vendor)
         {
-            db.Vendors.Add(vendor);
-            Credential credential = new Credential
+            try
             {
-                Email = vendor.Email,//email is the username
-                Password = vendor.Password
-            };
-            db.Credentials.Add(credential);
-            db.SaveChanges();
-            return "Vendor Added and can Login";
+                db.Vendors.Add(vendor);
+                Credential credential = new Credential
+                {
+                    Email = vendor.Email,//email is the username
+                    Password = vendor.Password
+                };
+                db.Credentials.Add(credential);
+                db.SaveChanges();
+                return "Vendor Added and can Login";
+            }
+            catch (Exception)
+            {
+                return "Exception from the front end";
+            }
         }
     }
 }

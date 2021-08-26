@@ -15,10 +15,40 @@ namespace SMS_Api.Controllers
 
         {
 
-            return db.Vendors.ToList();
+            try
+            {
+                return db.Vendors.ToList();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
 
 
 
+        }
+
+        public string Delete(int id)
+        {
+            try
+            {
+                Vendor vendor = db.Vendors.Find(id);
+                Credential credential = db.Credentials.Find(id);
+                if (vendor == null) { return "Id not Found"; }
+                else
+                {
+                    db.Vendors.Remove(vendor);
+                    db.Credentials.Remove(credential);
+                    db.SaveChanges();
+                    return "Seller removed successfully";
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }

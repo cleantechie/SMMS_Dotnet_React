@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 
 import IconButton from '@material-ui/core/IconButton';
 import Snackbar from '@material-ui/core/Snackbar';
+import { Adminavigation } from './Adminnavigation';
 
 
 export class Registration extends Component{
@@ -54,7 +55,8 @@ export class Registration extends Component{
    render()
    {
        return(
-         <div className="container"> 
+         <div className="container">
+             <Adminavigation/> 
 
                 <Snackbar anchorOrigin={{vertical:'bottom',horizontal:'center'}}
                 open={this.state.snackbaropen}

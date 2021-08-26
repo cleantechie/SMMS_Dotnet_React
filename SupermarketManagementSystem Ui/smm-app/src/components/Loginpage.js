@@ -56,12 +56,12 @@ function Loginpage(props) {
            <div class="login-page">
                 <main>
                     <div class="login-block1">
-                        <h1>Log into your account</h1>
+                        <h2>Log In To Access</h2>
                         <form onSubmit={Login}>
                             <div class="form-group">
                                 <div class="input-group">
                                      <span class="input-group-addon"><i class="fa fa-envelope ti-email"></i></span>
-                                        <input type="text" class="form-control" placeholder="Your email/username" name="Email" value={credential.Email} onChange={ onChange }/>
+                                        <input type="text" class="form-control"  placeholder="Your email/username" name="Email" value={credential.Email} onChange={ onChange }/>
                                 </div>
                             </div>
                             <hr class="hr-xs"/>
@@ -75,14 +75,7 @@ function Loginpage(props) {
                             <hr class="hr-xs"/>
                             <button class="btn btn-primary btn-block" type="submit" >Login</button>
 
-                            <div class="login-footer">
-                              <h6>New user? Register</h6>
-                              {/* <ul class="social-icons">
-                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                              </ul> */}
-                            </div>
+                            
 
                         </form>
                     </div>
