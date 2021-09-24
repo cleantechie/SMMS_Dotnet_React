@@ -3,12 +3,6 @@ This project was part of Cognizant internship in Dotnet and React track for Full
 The project was done by our pod consisting of 4 members
 The Backend technology used is webapi,frontend is ReactJS,Mssqlserver for Database
 
-The indivdual Contribution is as follows:
-Harsha Vardhan S(Me) - Entire Vendordashboard,VendorDetails,Invoice History is Admindashboard,Logout,Validations and Database Design
-Naveen Sai - Registration and Login
-Utkarsh - Add Product functionality in Admindashboard
-Bhavishya - Edit and Delete functionalities in Admindashboard
-
 Flow of the project
 
 1.First the user need to login as admin or seller.
